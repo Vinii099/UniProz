@@ -1,0 +1,1809 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #252525;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
+:root {
+
+    --yellow: #f9ca00;
+    --yellow-dark: #eab900;
+    --yellow-light: #fff7d6;
+
+    --black: #171717;
+    --dark: #242424;
+    --gray: #666666;
+    --gray-light: #f5f5f5;
+    --gray-border: #e8e8e8;
+
+    --white: #ffffff;
+
+    --max-width: 1180px;
+
+    --radius: 14px;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.section-container,
+.header-container,
+.footer-container {
+
+    width: min(
+        calc(100% - 60px),
+        var(--max-width)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #ededed;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.header-container {
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* LOGO */
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+.logo-placeholder {
+
+    width: 120px;
+
+    height: 50px;
+
+    border: 1px dashed #cfcfcf;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/*
+    Quando tiver o logo:
+
+    .logo-placeholder {
+        display: none;
+    }
+*/
+
+
+.logo-area img {
+
+    max-height: 55px;
+
+    width: auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 38px;
+
+    flex: 1;
+}
+
+
+.navigation a {
+
+    font-size: 14px;
+
+    color: #333;
+
+    position: relative;
+
+    transition: color 0.2s ease;
+}
+
+
+.navigation a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--yellow);
+
+    transition: width 0.2s ease;
+}
+
+
+.navigation a:hover {
+
+    color: #000;
+}
+
+
+.navigation a:hover::after {
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   USER / EMAIL
+========================================================= */
+
+.user-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.email-placeholder {
+
+    font-size: 13px;
+
+    color: #555;
+
+    max-width: 150px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.user-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   HERO SETEMBRO AMARELO
+========================================================= */
+
+.yellow-section {
+
+    background: var(--yellow);
+
+    margin: 35px auto 0;
+
+    width: min(
+        calc(100% - 60px),
+        var(--max-width)
+    );
+
+    border-radius: 2px;
+
+    overflow: hidden;
+}
+
+
+.yellow-content {
+
+    min-height: 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 55px 70px;
+
+    gap: 50px;
+}
+
+
+.yellow-text {
+
+    width: 48%;
+
+    color: #161616;
+}
+
+
+.small-title {
+
+    display: inline-block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    margin-bottom: 12px;
+}
+
+
+.yellow-text h1 {
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 0.98;
+
+    font-weight: 300;
+
+    margin-bottom: 20px;
+}
+
+
+.yellow-text h1 strong {
+
+    display: block;
+
+    font-weight: 800;
+}
+
+
+.yellow-text p {
+
+    font-size: 17px;
+
+    max-width: 450px;
+
+    margin-bottom: 28px;
+}
+
+
+.yellow-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 13px 23px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.yellow-button:hover {
+
+    transform: translateY(-2px);
+
+    background: #333;
+}
+
+
+/* =========================================================
+   IMAGEM PLACEHOLDER
+========================================================= */
+
+.yellow-image {
+
+    width: 45%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.image-placeholder {
+
+    width: 100%;
+
+    min-height: 230px;
+
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+
+    background: rgba(255, 255, 255, 0.25);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.55);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    border-radius: 8px;
+}
+
+
+.yellow-placeholder {
+
+    max-width: 390px;
+
+    min-height: 250px;
+
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section {
+
+    padding: 90px 0;
+}
+
+
+.about-section .section-container {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.9fr)
+        minmax(0, 1.1fr);
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.about-image {
+
+    width: 100%;
+}
+
+
+.about-image .image-placeholder {
+
+    min-height: 370px;
+}
+
+
+.about-text {
+
+    max-width: 580px;
+}
+
+
+.section-label {
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: #8c7200;
+
+    margin-bottom: 12px;
+}
+
+
+.about-text h2,
+.section-heading h2,
+.unipro z-text h2,
+.contact-content h2 {
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    color: var(--black);
+
+    margin-bottom: 22px;
+}
+
+
+.about-text h2 strong,
+.section-heading h2 strong,
+.unipro z-text h2 strong {
+
+    color: #c39d00;
+}
+
+
+.about-text p {
+
+    font-size: 16px;
+
+    color: var(--gray);
+
+    margin-bottom: 18px;
+}
+
+
+.primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: 12px;
+
+    padding: 14px 24px;
+
+    background: var(--black);
+
+    color: white;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.primary-button:hover {
+
+    transform: translateY(-2px);
+
+    background: #3a3a3a;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-section {
+
+    background: #fafafa;
+
+    padding: 90px 0;
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading p {
+
+    color: var(--gray);
+
+    font-size: 16px;
+}
+
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.service-card {
+
+    background: white;
+
+    border: 1px solid var(--gray-border);
+
+    border-radius: var(--radius);
+
+    padding: 30px 25px;
+
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.service-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 10px;
+
+    background: var(--yellow-light);
+
+    color: #ad8b00;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    margin-bottom: 22px;
+}
+
+
+.service-card h3 {
+
+    font-size: 19px;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+}
+
+
+.service-card p {
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    flex: 1;
+}
+
+
+.service-card a {
+
+    color: #9b7b00;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   UNIPROZ
+========================================================= */
+
+.unipro-section {
+
+    padding: 100px 0;
+
+    background: white;
+}
+
+
+.unipro-content {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+.unipro-text {
+
+    max-width: 570px;
+}
+
+
+.unipro-text h2 {
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+.unipro-text h2 strong {
+
+    color: #d2aa00;
+}
+
+
+.unipro-description {
+
+    font-size: 17px;
+
+    color: var(--gray);
+
+    margin-bottom: 30px;
+}
+
+
+/* FEATURES */
+
+.unipro-features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.feature {
+
+    display: flex;
+
+    gap: 14px;
+
+    align-items: flex-start;
+}
+
+
+.feature-icon {
+
+    flex-shrink: 0;
+
+    width: 26px;
+
+    height: 26px;
+
+    background: var(--yellow);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.feature h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 3px;
+}
+
+
+.feature p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOCKUP DO UNIPROZ
+========================================================= */
+
+.unipro-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.system-placeholder {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    background: #f4f4f4;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+
+.fake-browser {
+
+    background: white;
+
+    border-radius: 9px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.fake-browser-top {
+
+    height: 38px;
+
+    background: #ededed;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 13px;
+}
+
+
+.fake-browser-top span {
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #ccc;
+}
+
+
+.fake-system {
+
+    display: flex;
+
+    min-height: 310px;
+}
+
+
+.fake-sidebar {
+
+    width: 100px;
+
+    background: #242424;
+
+    color: white;
+
+    padding: 20px 10px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.fake-content {
+
+    flex: 1;
+
+    padding: 25px;
+}
+
+
+.fake-line {
+
+    height: 9px;
+
+    width: 70%;
+
+    background: #eeeeee;
+
+    border-radius: 5px;
+
+    margin-bottom: 12px;
+}
+
+
+.fake-line.large {
+
+    width: 90%;
+
+    height: 15px;
+
+    background: var(--yellow);
+
+    margin-bottom: 25px;
+}
+
+
+.fake-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+.fake-cards div {
+
+    height: 90px;
+
+    background: #f5f5f5;
+
+    border-radius: 7px;
+
+    border: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   SETEMBRO AMARELO - AWARENESS
+========================================================= */
+
+.awareness-section {
+
+    background: var(--yellow);
+
+    padding: 55px 0;
+}
+
+
+.awareness-container {
+
+    width: min(
+        calc(100% - 60px),
+        900px
+    );
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    text-align: left;
+}
+
+
+.awareness-symbol {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    color: var(--yellow);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    flex-shrink: 0;
+}
+
+
+.awareness-container span {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.awareness-container h2 {
+
+    font-size: clamp(24px, 3vw, 36px);
+
+    line-height: 1.1;
+
+    margin: 5px 0 8px;
+}
+
+
+.awareness-container p {
+
+    font-size: 15px;
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+.contact-section {
+
+    padding: 90px 0;
+}
+
+
+.contact-section .section-container {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        0.7fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.contact-content h2 {
+
+    max-width: 550px;
+}
+
+
+.contact-content p {
+
+    color: var(--gray);
+
+    max-width: 500px;
+
+    font-size: 16px;
+}
+
+
+.contact-image .image-placeholder {
+
+    min-height: 250px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    background: #181818;
+
+    color: white;
+
+    padding: 60px 0 30px;
+}
+
+
+.footer-container {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr;
+
+    gap: 60px;
+}
+
+
+.footer-brand {
+
+    max-width: 350px;
+}
+
+
+.footer-logo {
+
+    font-size: 26px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    color: var(--yellow);
+}
+
+
+.footer-brand p {
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+.footer h3 {
+
+    font-size: 14px;
+
+    margin-bottom: 17px;
+}
+
+
+.footer-links,
+.footer-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.footer-links a,
+.footer-contact a,
+.footer-contact span {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    transition: color 0.2s ease;
+}
+
+
+.footer-links a:hover,
+.footer-contact a:hover {
+
+    color: var(--yellow);
+}
+
+
+/* =========================================================
+   TABLET / IPAD
+   Aproximadamente 768px - 1194px
+========================================================= */
+
+@media (max-width: 1194px) {
+
+    .section-container,
+    .header-container,
+    .footer-container {
+
+        width: min(
+            calc(100% - 48px),
+            1020px
+        );
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+
+        height: 76px;
+
+        gap: 20px;
+    }
+
+
+    .navigation {
+
+        gap: 22px;
+    }
+
+
+    .navigation a {
+
+        font-size: 13px;
+    }
+
+
+    .email-placeholder {
+
+        max-width: 110px;
+
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .yellow-section {
+
+        width: min(
+            calc(100% - 48px),
+            1020px
+        );
+    }
+
+
+    .yellow-content {
+
+        min-height: 330px;
+
+        padding: 45px;
+    }
+
+
+    .yellow-text h1 {
+
+        font-size: 48px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+
+        padding: 70px 0;
+    }
+
+
+    .about-section .section-container {
+
+        gap: 45px;
+    }
+
+
+    .about-image .image-placeholder {
+
+        min-height: 310px;
+    }
+
+
+    /* SERVICES */
+
+    .services-section {
+
+        padding: 70px 0;
+    }
+
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 18px;
+    }
+
+
+    .service-card {
+
+        min-height: 260px;
+    }
+
+
+    /* UNIPROZ */
+
+    .unipro-section {
+
+        padding: 75px 0;
+    }
+
+
+    .unipro-content {
+
+        gap: 45px;
+    }
+
+
+    .unipro-text h2 {
+
+        font-size: 42px;
+    }
+
+
+    .fake-system {
+
+        min-height: 270px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        gap: 40px;
+    }
+}
+
+
+/* =========================================================
+   TABLET PORTRAIT / IPAD 11
+   Aproximadamente 768px - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .section-container,
+    .header-container,
+    .footer-container {
+
+        width: calc(100% - 50px);
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+
+        flex-wrap: wrap;
+
+        height: auto;
+
+        min-height: 75px;
+
+        padding: 12px 0;
+
+        row-gap: 12px;
+    }
+
+
+    .logo-area {
+
+        order: 1;
+    }
+
+
+    .user-area {
+
+        order: 2;
+
+        margin-left: auto;
+    }
+
+
+    .navigation {
+
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding-top: 8px;
+
+        border-top: 1px solid #eeeeee;
+    }
+
+
+    /* HERO */
+
+    .yellow-section {
+
+        margin-top: 25px;
+
+        width: calc(100% - 50px);
+    }
+
+
+    .yellow-content {
+
+        padding: 45px;
+
+        gap: 30px;
+    }
+
+
+    .yellow-text {
+
+        width: 52%;
+    }
+
+
+    .yellow-image {
+
+        width: 48%;
+    }
+
+
+    .yellow-text h1 {
+
+        font-size: 42px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section .section-container {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 35px;
+    }
+
+
+    /* UNIPROZ */
+
+    .unipro-content {
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 35px;
+    }
+
+
+    .unipro-text h2 {
+
+        font-size: 38px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section .section-container {
+
+        gap: 40px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+        gap: 30px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .section-container,
+    .header-container,
+    .footer-container {
+
+        width: calc(100% - 32px);
+    }
+
+
+    /* HEADER */
+
+    .header-container {
+
+        padding: 10px 0;
+    }
+
+
+    .logo-placeholder {
+
+        width: 95px;
+
+        height: 42px;
+    }
+
+
+    .email-placeholder {
+
+        display: none;
+    }
+
+
+    .user-icon {
+
+        width: 38px;
+
+        height: 38px;
+    }
+
+
+    .navigation {
+
+        gap: 16px;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 5px;
+    }
+
+
+    .navigation a {
+
+        white-space: nowrap;
+
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .yellow-section {
+
+        width: calc(100% - 32px);
+
+        margin-top: 18px;
+    }
+
+
+    .yellow-content {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        padding: 35px 25px;
+    }
+
+
+    .yellow-text,
+    .yellow-image {
+
+        width: 100%;
+    }
+
+
+    .yellow-text h1 {
+
+        font-size: 42px;
+    }
+
+
+    .yellow-text p {
+
+        font-size: 15px;
+    }
+
+
+    .yellow-image {
+
+        order: -1;
+    }
+
+
+    .yellow-placeholder {
+
+        min-height: 170px;
+
+        max-width: none;
+    }
+
+
+    /* ABOUT */
+
+    .about-section {
+
+        padding: 60px 0;
+    }
+
+
+    .about-section .section-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .about-image {
+
+        order: 2;
+    }
+
+
+    .about-text {
+
+        order: 1;
+    }
+
+
+    .about-image .image-placeholder {
+
+        min-height: 230px;
+    }
+
+
+    /* SERVICES */
+
+    .services-section {
+
+        padding: 60px 0;
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .service-card {
+
+        min-height: auto;
+    }
+
+
+    /* UNIPROZ */
+
+    .unipro-section {
+
+        padding: 65px 0;
+    }
+
+
+    .unipro-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .unipro-image {
+
+        order: 2;
+    }
+
+
+    .unipro-text {
+
+        order: 1;
+    }
+
+
+    .unipro-text h2 {
+
+        font-size: 38px;
+    }
+
+
+    .fake-system {
+
+        min-height: 230px;
+    }
+
+
+    .fake-sidebar {
+
+        width: 70px;
+
+        font-size: 10px;
+    }
+
+
+    .fake-content {
+
+        padding: 15px;
+    }
+
+
+    .fake-cards {
+
+        gap: 6px;
+    }
+
+
+    /* AWARENESS */
+
+    .awareness-container {
+
+        width: calc(100% - 32px);
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section {
+
+        padding: 60px 0;
+    }
+
+
+    .contact-section .section-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .yellow-text h1 {
+
+        font-size: 36px;
+    }
+
+
+    .navigation {
+
+        gap: 12px;
+    }
+
+
+    .navigation a {
+
+        font-size: 11px;
+    }
+
+
+    .section-heading h2,
+    .about-text h2 {
+
+        font-size: 31px;
+    }
+
+}

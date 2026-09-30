@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Cadastro - Sistema de Enfermagem</title>
+
+    <link
+        rel="stylesheet"
+        href="../visual/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-box">
+
+            <header class="login-header">
+
+                <div class="login-icone">
+                    🩺
+                </div>
+
+                <h1>
+                    Cadastro profissional
+                </h1>
+
+                <p>
+                    Sistema de Enfermagem
+                </p>
+
+                <small>
+                    Cadastre uma profissional autorizada
+                </small>
+
+            </header>
+
+
+            <form
+                id="formCadastroProfissional"
+                novalidate
+            >
+
+
+                <!-- =====================================
+                     NOME
+                ====================================== -->
+
+                <div class="form-group">
+
+                    <label for="nomeProfissional">
+                        Nome da profissional
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nomeProfissional"
+                        name="nomeProfissional"
+                        placeholder="Digite seu nome completo"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <small
+                        id="nomeProfissional-feedback"
+                        class="feedback-campo"
+                    ></small>
+
+                </div>
+
+
+                <!-- =====================================
+                     SENHA
+                ====================================== -->
+
+                <div class="form-group">
+
+                    <label for="senhaProfissional">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="senhaProfissional"
+                        name="senhaProfissional"
+                        placeholder="Digite sua senha"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <small
+                        id="senhaProfissional-feedback"
+                        class="feedback-campo"
+                    ></small>
+
+                </div>
+
+
+                <!-- =====================================
+                     CONFIRMAR SENHA
+                ====================================== -->
+
+                <div class="form-group">
+
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmarSenha"
+                        name="confirmarSenha"
+                        placeholder="Digite a senha novamente"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                    <small
+                        id="confirmarSenha-feedback"
+                        class="feedback-campo"
+                    ></small>
+
+                </div>
+
+
+                <!-- =====================================
+                     MENSAGEM
+                ====================================== -->
+
+                <div
+                    id="mensagemProfissional"
+                    class="mensagem"
+                ></div>
+
+
+                <!-- =====================================
+                     BOTÃO
+                ====================================== -->
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn-principal"
+                    >
+                        Cadastrar profissional
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
