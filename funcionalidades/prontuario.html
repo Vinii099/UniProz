@@ -1,155 +1,85 @@
     <!DOCTYPE html>
     <html lang="pt-BR">
-
     <head>
-
         <meta charset="UTF-8">
-
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        >
-
-        <title>Prontuário do Paciente</title>
-
-        <link
-            rel="stylesheet"
-            href="../visual/style.css"
-        >
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uniproz - Prontuário</title>
+        <link rel="stylesheet" href="../visual/style.css">
+        <link rel="shortcut icon" href="../imagens/favicon.ico" type="icone Uniproz">
+        <script src="../funcionalidades/prontuario.js"></script>
     </head>
-
-    <body>
-
+<body>
         <main class="pagina-prontuario">
-
-            <!-- =================================================
-                CABEÇALHO
-            ================================================== -->
-
             <header class="cabecalho-prontuario">
-
                 <div>
-
                     <h1>
                         Prontuário do Paciente
                     </h1>
-
                     <p>
                         Registro de acompanhamento
                     </p>
-
                 </div>
 
                 <div class="identificacao-profissional">
-
                     <span>
                         Profissional
                     </span>
-
                     <strong>
                         Médica
                     </strong>
-
                 </div>
-
             </header>
 
-
-            <!-- =================================================
-                SELEÇÃO DO PACIENTE
-            ================================================== -->
-
             <section class="card-prontuario">
-
                 <div class="titulo-secao">
-
                     <h2>
                         Selecionar paciente
                     </h2>
-
                     <p>
                         Pesquise pelo nome ou número do prontuário.
                     </p>
-
                 </div>
-
 
                 <div class="busca-paciente">
 
-                    <input
-                        type="text"
-                        id="buscaPaciente"
-                        placeholder="Nome ou número do prontuário..."
-                        autocomplete="off"
-                    >
+                    <input type="text" id="buscaPaciente" placeholder="Nome ou número do prontuário..." autocomplete="off">
 
-                    <button
-                        type="button"
-                        id="btnPesquisar"
-                    >
+                    <button type="button" id="btnPesquisar">
                         Pesquisar
                     </button>
-
                 </div>
-
-
-                <div
-                    id="resultadosPacientes"
-                    class="resultados-pacientes"
-                ></div>
-
+                <div id="resultadosPacientes" class="resultados-pacientes"></div>
             </section>
 
-
-            <!-- =================================================
-                PACIENTE SELECIONADO
-            ================================================== -->
-
-            <section
-                id="pacienteSelecionado"
-                class="card-prontuario paciente-selecionado oculto"
-            >
-
+            <section id="pacienteSelecionado" class="card-prontuario paciente-selecionado oculto">
                 <div class="cabecalho-paciente">
-
-                    <div>
-
-                        <span class="rotulo">
+                <div>
+                    <span class="rotulo">
                             PACIENTE SELECIONADO
                         </span>
-
                         <h2 id="pacienteNome">
                             -
                         </h2>
-
                         <p>
                             Prontuário:
                             <strong id="pacienteProntuario">
                                 -
                             </strong>
                         </p>
-
                     </div>
 
 
                     <div class="status-paciente">
-
                         <span>
                             Status
                         </span>
-
                         <strong id="statusPaciente">
                             Em acompanhamento
                         </strong>
-
                     </div>
-
                 </div>
 
-
                 <div class="informacoes-paciente">
-
                     <div>
                         <span>Data de nascimento</span>
                         <strong id="pacienteNascimento">-</strong>
@@ -169,64 +99,33 @@
                         <span>Convênio</span>
                         <strong id="pacienteConvenio">-</strong>
                     </div>
-
                 </div>
-
             </section>
 
-
-            <!-- =================================================
-                FORMULÁRIO DE REGISTRO
-            ================================================== -->
-
-            <form
-                id="formProntuario"
-                class="oculto"
-            >
-
-
-                <!-- =================================================
-                    1. CONDIÇÃO ATUAL
-                ================================================== -->
+            <form id="formProntuario" class="oculto">
 
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             1. Condição atual do paciente
                         </h2>
-
                         <p>
                             Descreva detalhadamente o estado atual do paciente.
                         </p>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="condicaoAtual">
                             Condição atual
                         </label>
-
-                        <textarea
-                            id="condicaoAtual"
-                            rows="5"
-                            placeholder="Descreva a condição atual do paciente..."
-                        ></textarea>
-
+                        <textarea id="condicaoAtual" rows="5" placeholder="Descreva a condição atual do paciente..."></textarea>
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="nivelConsciencia">
                                 Nível de consciência
                             </label>
-
                             <select id="nivelConsciencia">
 
                                 <option value="">
@@ -256,18 +155,13 @@
                                 <option>
                                     Outro
                                 </option>
-
                             </select>
-
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="estadoGeral">
                                 Estado geral
                             </label>
-
                             <select id="estadoGeral">
 
                                 <option value="">
@@ -293,135 +187,76 @@
                                 <option>
                                     Outro
                                 </option>
-
                             </select>
-
                         </div>
-
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    2. SINAIS VITAIS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             2. Sinais vitais
                         </h2>
-
                         <p>
                             Registre os sinais vitais observados.
                         </p>
-
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="pressaoArterial">
                                 Pressão arterial
                             </label>
-
-                            <input
-                                type="text"
-                                id="pressaoArterial"
-                                placeholder="Ex.: 120/80 mmHg"
-                            >
-
+                            
+                            <input type="text" id="pressaoArterial" placeholder="Ex.: 120/80 mmHg">
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="frequenciaCardiaca">
                                 Frequência cardíaca
                             </label>
 
-                            <input
-                                type="text"
-                                id="frequenciaCardiaca"
-                                placeholder="Ex.: 78 bpm"
-                            >
-
+                            <input type="text" id="frequenciaCardiaca" placeholder="Ex.: 78 bpm">
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="frequenciaRespiratoria">
                                 Frequência respiratória
                             </label>
 
-                            <input
-                                type="text"
-                                id="frequenciaRespiratoria"
-                                placeholder="Ex.: 16 irpm"
-                            >
+                            <input type="text" id="frequenciaRespiratoria" placeholder="Ex.: 16 irpm">
 
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="temperatura">
                                 Temperatura
                             </label>
 
-                            <input
-                                type="text"
-                                id="temperatura"
-                                placeholder="Ex.: 36,5 °C"
-                            >
-
+                            <input type="text" id="temperatura" placeholder="Ex.: 36,5 °C">
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="saturacao">
                                 Saturação de O₂
                             </label>
 
-                            <input
-                                type="text"
-                                id="saturacao"
-                                placeholder="Ex.: 98%"
-                            >
-
+                            <input type="text" id="saturacao" placeholder="Ex.: 98%">
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="glicemia">
                                 Glicemia
                             </label>
 
-                            <input
-                                type="text"
-                                id="glicemia"
-                                placeholder="Ex.: 95 mg/dL"
-                            >
-
+                            <input type="text" id="glicemia" placeholder="Ex.: 95 mg/dL">
                         </div>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="dor">
                             Escala de dor
                         </label>
-
                         <select id="dor">
 
                             <option value="">
@@ -471,22 +306,12 @@
                             <option value="10">
                                 10 — Dor intensa
                             </option>
-
                         </select>
-
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    3. CUIDADOS REALIZADOS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             3. Cuidados realizados
                         </h2>
@@ -494,214 +319,108 @@
                         <p>
                             Marque os cuidados realizados e descreva o que foi feito.
                         </p>
-
                     </div>
 
 
                     <div class="lista-opcoes">
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Banho de leito"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Banho de leito">
                             <span>
                                 Banho de leito
                             </span>
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Higiene íntima"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Higiene íntima">
                             <span>
                                 Higiene íntima
                             </span>
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Higiene oral"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Higiene oral">
                             <span>
                                 Higiene oral
                             </span>
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Troca de roupa de cama"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Troca de roupa de cama">
                             <span>
                                 Troca de roupa de cama
                             </span>
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Mudança de decúbito"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Mudança de decúbito">
                             <span>
                                 Mudança de decúbito
                             </span>
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Auxílio na alimentação"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Auxílio na alimentação">
                             <span>
                                 Auxílio na alimentação
                             </span>
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Auxílio na mobilidade"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Auxílio na mobilidade">
                             <span>
                                 Auxílio na mobilidade
                             </span>
-
                         </label>
 
 
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="cuidados"
-                                value="Outros cuidados"
-                            >
-
+                            <input type="checkbox" name="cuidados" value="Outros cuidados">
                             <span>
                                 Outros
                             </span>
-
                         </label>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="detalhesCuidados">
                             Detalhes dos cuidados
                         </label>
-
-                        <textarea
-                            id="detalhesCuidados"
-                            rows="5"
-                            placeholder="Descreva os cuidados realizados..."
-                        ></textarea>
-
+                        <textarea id="detalhesCuidados" rows="5" placeholder="Descreva os cuidados realizados..."></textarea>
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    4. MEDICAMENTOS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             4. Medicamentos
                         </h2>
-
                         <p>
                             Registre os medicamentos administrados ou ocorrências relacionadas.
                         </p>
-
                     </div>
 
+                    <div id="listaMedicamentos" class="lista-dinamica"></div>
 
-                    <div
-                        id="listaMedicamentos"
-                        class="lista-dinamica"
-                    ></div>
-
-
-                    <button
-                        type="button"
-                        id="btnAdicionarMedicamento"
-                        class="btn-secundario"
-                    >
+                    <button type="button" id="btnAdicionarMedicamento" class="btn-secundario">
                         + Adicionar medicamento
                     </button>
-
                 </section>
 
-
-                <!-- =================================================
-                    5. PROCEDIMENTOS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             5. Procedimentos realizados
                         </h2>
-
                         <p>
                             Registre os procedimentos realizados durante o atendimento.
                         </p>
-
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="tipoProcedimento">
                                 Tipo de procedimento
                             </label>
-
                             <select id="tipoProcedimento">
 
                                 <option value="">
@@ -735,86 +454,46 @@
                                 <option>
                                     Outro
                                 </option>
-
                             </select>
-
                         </div>
 
 
                         <div class="campo-prontuario">
-
                             <label for="localProcedimento">
                                 Local
                             </label>
-
-                            <input
-                                type="text"
-                                id="localProcedimento"
-                                placeholder="Local do procedimento"
-                            >
-
+                            <input type="text" id="localProcedimento" placeholder="Local do procedimento">
                         </div>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="detalhesProcedimento">
                             Descrição do procedimento
                         </label>
-
-                        <textarea
-                            id="detalhesProcedimento"
-                            rows="5"
-                            placeholder="Descreva detalhadamente o procedimento..."
-                        ></textarea>
-
+                        <textarea id="detalhesProcedimento" rows="5" placeholder="Descreva detalhadamente o procedimento..."></textarea>
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    6. CURATIVOS / FERIDAS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             6. Curativos e feridas
                         </h2>
-
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="localFerida">
                                 Local da ferida
                             </label>
-
-                            <input
-                                type="text"
-                                id="localFerida"
-                                placeholder="Ex.: membro inferior direito"
-                            >
-
+                            <input type="text" id="localFerida" placeholder="Ex.: membro inferior direito">
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="tipoFerida">
                                 Tipo
                             </label>
-
                             <select id="tipoFerida">
-
                                 <option value="">
                                     Selecione
                                 </option>
@@ -838,90 +517,47 @@
                                 <option>
                                     Outra
                                 </option>
-
                             </select>
-
                         </div>
-
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="tamanhoFerida">
                                 Dimensões
                             </label>
-
-                            <input
-                                type="text"
-                                id="tamanhoFerida"
-                                placeholder="Ex.: 3 x 2 cm"
-                            >
-
+                            <input type="text" id="tamanhoFerida" placeholder="Ex.: 3 x 2 cm">
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="aspectoFerida">
                                 Aspecto
                             </label>
-
-                            <input
-                                type="text"
-                                id="aspectoFerida"
-                                placeholder="Descreva o aspecto"
-                            >
-
+                            <input type="text" id="aspectoFerida" placeholder="Descreva o aspecto">
                         </div>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="detalhesCurativo">
                             Descrição do curativo
                         </label>
-
-                        <textarea
-                            id="detalhesCurativo"
-                            rows="4"
-                            placeholder="Descreva o procedimento e condições observadas..."
-                        ></textarea>
-
+                        <textarea id="detalhesCurativo" rows="4" placeholder="Descreva o procedimento e condições observadas..."></textarea>
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    7. ALIMENTAÇÃO
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             7. Alimentação e hidratação
                         </h2>
-
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="tipoAlimentacao">
                                 Tipo de alimentação
                             </label>
-
                             <select id="tipoAlimentacao">
-
                                 <option value="">
                                     Selecione
                                 </option>
@@ -941,20 +577,14 @@
                                 <option>
                                     Outra
                                 </option>
-
                             </select>
-
                         </div>
 
-
                         <div class="campo-prontuario">
-
                             <label for="aceitacaoAlimentacao">
                                 Aceitação
                             </label>
-
                             <select id="aceitacaoAlimentacao">
-
                                 <option value="">
                                     Selecione
                                 </option>
@@ -970,126 +600,57 @@
                                 <option>
                                     Recusou
                                 </option>
-
                             </select>
-
                         </div>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="detalhesAlimentacao">
                             Observações sobre alimentação/hidratação
                         </label>
-
-                        <textarea
-                            id="detalhesAlimentacao"
-                            rows="4"
-                        ></textarea>
-
+                        <textarea id="detalhesAlimentacao" rows="4"></textarea>
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    8. DISPOSITIVOS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             8. Dispositivos
                         </h2>
-
                         <p>
                             Registre dispositivos utilizados no paciente.
                         </p>
-
                     </div>
 
-
                     <div class="lista-opcoes">
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="dispositivos"
-                                value="Acesso venoso periférico"
-                            >
-
+                            <input type="checkbox" name="dispositivos" value="Acesso venoso periférico">
                             Acesso venoso periférico
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="dispositivos"
-                                value="Cateter venoso"
-                            >
-
+                            <input type="checkbox" name="dispositivos" value="Cateter venoso">
                             Cateter venoso
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="dispositivos"
-                                value="Sonda vesical"
-                            >
-
+                            <input type="checkbox" name="dispositivos" value="Sonda vesical">
                             Sonda vesical
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="dispositivos"
-                                value="Sonda nasogástrica"
-                            >
-
+                            <input type="checkbox" name="dispositivos" value="Sonda nasogástrica">
                             Sonda nasogástrica
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="dispositivos"
-                                value="Dreno"
-                            >
-
+                            <input type="checkbox" name="dispositivos" value="Dreno">
                             Dreno
-
                         </label>
 
-
                         <label class="opcao-checkbox">
-
-                            <input
-                                type="checkbox"
-                                name="dispositivos"
-                                value="Ostomia"
-                            >
-
+                            <input type="checkbox" name="dispositivos" value="Ostomia">
                             Ostomia
-
                         </label>
 
                     </div>
@@ -1111,36 +672,22 @@
 
                 </section>
 
-
-                <!-- =================================================
-                    9. INTERCORRÊNCIAS
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             9. Intercorrências
                         </h2>
-
                         <p>
                             Registre qualquer ocorrência relevante durante o atendimento.
                         </p>
-
                     </div>
 
-
                     <div class="grid-campos">
-
                         <div class="campo-prontuario">
-
                             <label for="tipoIntercorrencia">
                                 Tipo
                             </label>
-
                             <select id="tipoIntercorrencia">
-
                                 <option value="">
                                     Nenhuma / não informado
                                 </option>
@@ -1184,1556 +731,77 @@
                                 <option>
                                     Outra
                                 </option>
-
                             </select>
-
                         </div>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="detalhesIntercorrencia">
                             Descrição da intercorrência
                         </label>
-
-                        <textarea
-                            id="detalhesIntercorrencia"
-                            rows="5"
-                            placeholder="Descreva o ocorrido..."
-                        ></textarea>
-
+                        <textarea id="detalhesIntercorrencia" rows="5" placeholder="Descreva o ocorrido..."></textarea>
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="condutaIntercorrencia">
                             Conduta registrada
                         </label>
-
-                        <textarea
-                            id="condutaIntercorrencia"
-                            rows="5"
-                            placeholder="Descreva a conduta realizada..."
-                        ></textarea>
-
+                        <textarea id="condutaIntercorrencia" rows="5" placeholder="Descreva a conduta realizada..."></textarea>
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    10. EVOLUÇÃO
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             10. Evolução
                         </h2>
-
                         <p>
                             Registre a evolução do paciente durante o atendimento.
                         </p>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="evolucao">
                             Evolução do paciente
                         </label>
-
-                        <textarea
-                            id="evolucao"
-                            rows="8"
-                            placeholder="Escreva aqui a evolução do paciente..."
-                        ></textarea>
-
+                        <textarea id="evolucao" rows="8" placeholder="Escreva aqui a evolução do paciente..."></textarea>
                     </div>
-
                 </section>
 
-
-                <!-- =================================================
-                    11. OBSERVAÇÕES
-                ================================================== -->
-
                 <section class="card-prontuario">
-
                     <div class="titulo-secao">
-
                         <h2>
                             11. Observações gerais
                         </h2>
-
                     </div>
 
-
                     <div class="campo-prontuario">
-
                         <label for="observacoes">
                             Observações
                         </label>
-
-                        <textarea
-                            id="observacoes"
-                            rows="7"
-                            placeholder="Outras informações importantes..."
-                        ></textarea>
-
+                        <textarea id="observacoes" rows="7" placeholder="Outras informações importantes..."></textarea>
                     </div>
-
                 </section>
-
-
-                <!-- =================================================
-                    BOTÕES
-                ================================================== -->
 
                 <section class="area-salvar">
-
-                    <div
-                        id="mensagemProntuario"
-                        class="mensagem-prontuario"
-                    ></div>
-
-
-                    <button
-                        type="submit"
-                        class="btn-salvar-prontuario"
-                    >
+                    <div id="mensagemProntuario" class="mensagem-prontuario"></div>
+                    <button type="submit" class="btn-salvar-prontuario">
                         Salvar registro no prontuário
                     </button>
-
                 </section>
-
-
             </form>
 
-
-            <!-- =================================================
-                HISTÓRICO
-            ================================================== -->
-
-            <section
-                id="historicoPaciente"
-                class="card-prontuario oculto"
-            >
-
+            <section id="historicoPaciente" class="card-prontuario oculto">
                 <div class="titulo-secao">
-
                     <h2>
                         Histórico de registros
                     </h2>
-
                     <p>
                         Registros já realizados para este paciente.
                     </p>
-
                 </div>
-
-
-                <div
-                    id="listaHistorico"
-                    class="historico-lista"
-                ></div>
-
+                <div id="listaHistorico" class="historico-lista"></div>
             </section>
-
         </main>
-
-
-        <!-- =====================================================
-            JAVASCRIPT DA PÁGINA
-        ====================================================== -->
-
-        <script>
-
-            // =====================================================
-            // CONFIGURAÇÃO
-            // =====================================================
-
-            const CHAVE_PACIENTES =
-                "enfermagem_pacientes";
-
-
-            let pacienteAtual = null;
-
-
-            // =====================================================
-            // BANCO LOCAL
-            // =====================================================
-
-            function obterPacientes() {
-
-                const dados =
-                    localStorage.getItem(
-                        CHAVE_PACIENTES
-                    );
-
-
-                if (!dados) {
-
-                    return [];
-
-                }
-
-
-                try {
-
-                    return JSON.parse(dados);
-
-                } catch (erro) {
-
-                    console.error(
-                        "Erro ao carregar pacientes:",
-                        erro
-                    );
-
-                    return [];
-
-                }
-
-            }
-
-
-            function salvarPacientes(pacientes) {
-
-                localStorage.setItem(
-                    CHAVE_PACIENTES,
-                    JSON.stringify(pacientes)
-                );
-
-            }
-
-
-            // =====================================================
-            // ELEMENTOS
-            // =====================================================
-
-            const buscaPaciente =
-                document.getElementById(
-                    "buscaPaciente"
-                );
-
-
-            const resultados =
-                document.getElementById(
-                    "resultadosPacientes"
-                );
-
-
-            const pacienteSelecionado =
-                document.getElementById(
-                    "pacienteSelecionado"
-                );
-
-
-            const form =
-                document.getElementById(
-                    "formProntuario"
-                );
-
-
-            const historico =
-                document.getElementById(
-                    "historicoPaciente"
-                );
-
-
-            // =====================================================
-            // PESQUISA DE PACIENTE
-            // =====================================================
-
-            function pesquisarPacientes() {
-
-                const termo =
-                    buscaPaciente.value
-                        .trim()
-                        .toLowerCase();
-
-
-                const pacientes =
-                    obterPacientes();
-
-
-                if (!termo) {
-
-                    resultados.innerHTML = `
-                        <div class="mensagem-neutra">
-                            Digite o nome ou número do prontuário.
-                        </div>
-                    `;
-
-                    return;
-
-                }
-
-
-                const encontrados =
-                    pacientes.filter(
-                        paciente => {
-
-                            const nome =
-                                String(
-                                    paciente.nomeCompleto || ""
-                                ).toLowerCase();
-
-
-                            const prontuario =
-                                String(
-                                    paciente.prontuario || ""
-                                );
-
-
-                            return (
-                                nome.includes(termo) ||
-                                prontuario.includes(termo)
-                            );
-
-                        }
-                    );
-
-
-                if (
-                    encontrados.length === 0
-                ) {
-
-                    resultados.innerHTML = `
-                        <div class="mensagem-neutra">
-                            Nenhum paciente encontrado.
-                        </div>
-                    `;
-
-                    return;
-
-                }
-
-
-                resultados.innerHTML = "";
-
-
-                encontrados.forEach(
-                    paciente => {
-
-                        const item =
-                            document.createElement(
-                                "button"
-                            );
-
-
-                        item.type =
-                            "button";
-
-
-                        item.className =
-                            "resultado-paciente";
-
-
-                        item.innerHTML = `
-
-                            <div>
-
-                                <strong>
-                                    ${escaparHTML(
-                                        paciente.nomeCompleto
-                                    )}
-                                </strong>
-
-                                <span>
-                                    Prontuário:
-                                    ${escaparHTML(
-                                        paciente.prontuario
-                                    )}
-                                </span>
-
-                            </div>
-
-                            <span>
-                                Selecionar →
-                            </span>
-
-                        `;
-
-
-                        item.addEventListener(
-                            "click",
-                            () => {
-
-                                selecionarPaciente(
-                                    paciente.prontuario
-                                );
-
-                            }
-                        );
-
-
-                        resultados.appendChild(
-                            item
-                        );
-
-                    }
-                );
-
-            }
-
-
-            document
-                .getElementById(
-                    "btnPesquisar"
-                )
-                .addEventListener(
-                    "click",
-                    pesquisarPacientes
-                );
-
-
-            buscaPaciente.addEventListener(
-                "input",
-                pesquisarPacientes
-            );
-
-
-            // =====================================================
-            // SELECIONAR PACIENTE
-            // =====================================================
-
-            function selecionarPaciente(
-                prontuario
-            ) {
-
-                const pacientes =
-                    obterPacientes();
-
-
-                pacienteAtual =
-                    pacientes.find(
-                        paciente =>
-                            paciente.prontuario ===
-                            prontuario
-                    );
-
-
-                if (!pacienteAtual) {
-
-                    return;
-
-                }
-
-
-                document.getElementById(
-                    "pacienteNome"
-                ).textContent =
-                    pacienteAtual.nomeCompleto;
-
-
-                document.getElementById(
-                    "pacienteProntuario"
-                ).textContent =
-                    pacienteAtual.prontuario;
-
-
-                document.getElementById(
-                    "pacienteNascimento"
-                ).textContent =
-                    formatarData(
-                        pacienteAtual.dataNascimento
-                    );
-
-
-                document.getElementById(
-                    "pacienteIdade"
-                ).textContent =
-                    pacienteAtual.idade +
-                    " anos";
-
-
-                document.getElementById(
-                    "pacienteMae"
-                ).textContent =
-                    pacienteAtual.nomeMae ||
-                    "Não informado";
-
-
-                document.getElementById(
-                    "pacienteConvenio"
-                ).textContent =
-                    pacienteAtual.convenio ||
-                    "Particular / não informado";
-
-
-                pacienteSelecionado
-                    .classList
-                    .remove(
-                        "oculto"
-                    );
-
-
-                form
-                    .classList
-                    .remove(
-                        "oculto"
-                    );
-
-
-                historico
-                    .classList
-                    .remove(
-                        "oculto"
-                    );
-
-
-                resultados.innerHTML = "";
-
-
-                mostrarHistorico();
-
-            }
-
-
-            // =====================================================
-            // HISTÓRICO
-            // =====================================================
-
-            function mostrarHistorico() {
-
-                const lista =
-                    document.getElementById(
-                        "listaHistorico"
-                    );
-
-
-                lista.innerHTML = "";
-
-
-                const registros =
-                    pacienteAtual.registros || [];
-
-
-                if (
-                    registros.length === 0
-                ) {
-
-                    lista.innerHTML = `
-                        <div class="mensagem-neutra">
-                            Ainda não existem registros para este paciente.
-                        </div>
-                    `;
-
-                    return;
-
-                }
-
-
-                const registrosOrdenados =
-                    [...registros].reverse();
-
-
-                registrosOrdenados.forEach(
-                    registro => {
-
-                        const item =
-                            document.createElement(
-                                "article"
-                            );
-
-
-                        item.className =
-                            "item-historico";
-
-
-                        const cuidados =
-                            registro.cuidados &&
-                            registro.cuidados.length
-                                ? registro.cuidados.join(
-                                    ", "
-                                )
-                                : "Nenhum cuidado selecionado";
-
-
-                        item.innerHTML = `
-
-                            <div class="historico-cabecalho">
-
-                                <strong>
-                                    ${formatarDataHora(
-                                        registro.dataRegistro
-                                    )}
-                                </strong>
-
-                                <span>
-                                    Registro de acompanhamento
-                                </span>
-
-                            </div>
-
-
-                            <div class="historico-conteudo">
-
-                                ${
-                                    registro.condicaoAtual
-                                    ? `
-                                        <p>
-                                            <strong>
-                                                Condição:
-                                            </strong>
-
-                                            ${escaparHTML(
-                                                registro.condicaoAtual
-                                            )}
-                                        </p>
-                                    `
-                                    : ""
-                                }
-
-
-                                ${
-                                    cuidados
-                                    ? `
-                                        <p>
-                                            <strong>
-                                                Cuidados:
-                                            </strong>
-
-                                            ${escaparHTML(
-                                                cuidados
-                                            )}
-                                        </p>
-                                    `
-                                    : ""
-                                }
-
-
-                                ${
-                                    registro.evolucao
-                                    ? `
-                                        <p>
-                                            <strong>
-                                                Evolução:
-                                            </strong>
-
-                                            ${escaparHTML(
-                                                registro.evolucao
-                                            )}
-                                        </p>
-                                    `
-                                    : ""
-                                }
-
-                            </div>
-
-                        `;
-
-
-                        lista.appendChild(
-                            item
-                        );
-
-                    }
-                );
-
-            }
-
-
-            // =====================================================
-            // MEDICAMENTOS DINÂMICOS
-            // =====================================================
-
-            let contadorMedicamentos = 0;
-
-
-            document
-                .getElementById(
-                    "btnAdicionarMedicamento"
-                )
-                .addEventListener(
-                    "click",
-                    adicionarMedicamento
-                );
-
-
-            function adicionarMedicamento() {
-
-                contadorMedicamentos++;
-
-
-                const lista =
-                    document.getElementById(
-                        "listaMedicamentos"
-                    );
-
-
-                const medicamento =
-                    document.createElement(
-                        "div"
-                    );
-
-
-                medicamento.className =
-                    "bloco-medicamento";
-
-
-                medicamento.dataset.id =
-                    contadorMedicamentos;
-
-
-                medicamento.innerHTML = `
-
-                    <div class="cabecalho-bloco">
-
-                        <strong>
-                            Medicamento ${contadorMedicamentos}
-                        </strong>
-
-                        <button
-                            type="button"
-                            class="btn-remover"
-                        >
-                            Remover
-                        </button>
-
-                    </div>
-
-
-                    <div class="grid-campos">
-
-                        <div class="campo-prontuario">
-
-                            <label>
-                                Medicamento
-                            </label>
-
-                            <input
-                                type="text"
-                                class="med-nome"
-                                placeholder="Nome do medicamento"
-                            >
-
-                        </div>
-
-
-                        <div class="campo-prontuario">
-
-                            <label>
-                                Dose
-                            </label>
-
-                            <input
-                                type="text"
-                                class="med-dose"
-                                placeholder="Dose"
-                            >
-
-                        </div>
-
-
-                        <div class="campo-prontuario">
-
-                            <label>
-                                Via
-                            </label>
-
-                            <select class="med-via">
-
-                                <option value="">
-                                    Selecione
-                                </option>
-
-                                <option>
-                                    Oral
-                                </option>
-
-                                <option>
-                                    Intravenosa
-                                </option>
-
-                                <option>
-                                    Intramuscular
-                                </option>
-
-                                <option>
-                                    Subcutânea
-                                </option>
-
-                                <option>
-                                    Tópica
-                                </option>
-
-                                <option>
-                                    Inalatória
-                                </option>
-
-                                <option>
-                                    Outra
-                                </option>
-
-                            </select>
-
-                        </div>
-
-
-                        <div class="campo-prontuario">
-
-                            <label>
-                                Horário
-                            </label>
-
-                            <input
-                                type="time"
-                                class="med-horario"
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="grid-campos">
-
-                        <div class="campo-prontuario">
-
-                            <label>
-                                Situação
-                            </label>
-
-                            <select class="med-status">
-
-                                <option>
-                                    Administrado
-                                </option>
-
-                                <option>
-                                    Não administrado
-                                </option>
-
-                                <option>
-                                    Recusado pelo paciente
-                                </option>
-
-                                <option>
-                                    Suspenso
-                                </option>
-
-                                <option>
-                                    Adiado
-                                </option>
-
-                            </select>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="campo-prontuario">
-
-                        <label>
-                            Observação
-                        </label>
-
-                        <textarea
-                            class="med-observacao"
-                            rows="3"
-                            placeholder="Observações sobre o medicamento..."
-                        ></textarea>
-
-                    </div>
-
-                `;
-
-
-                medicamento
-                    .querySelector(
-                        ".btn-remover"
-                    )
-                    .addEventListener(
-                        "click",
-                        () => {
-
-                            medicamento.remove();
-
-                        }
-                    );
-
-
-                lista.appendChild(
-                    medicamento
-                );
-
-            }
-
-
-            // =====================================================
-            // PEGAR MEDICAMENTOS
-            // =====================================================
-
-            function obterMedicamentos() {
-
-                const blocos =
-                    document.querySelectorAll(
-                        ".bloco-medicamento"
-                    );
-
-
-                const medicamentos = [];
-
-
-                blocos.forEach(
-                    bloco => {
-
-                        medicamentos.push({
-
-                            nome:
-                                bloco
-                                    .querySelector(
-                                        ".med-nome"
-                                    )
-                                    .value
-                                    .trim(),
-
-                            dose:
-                                bloco
-                                    .querySelector(
-                                        ".med-dose"
-                                    )
-                                    .value
-                                    .trim(),
-
-                            via:
-                                bloco
-                                    .querySelector(
-                                        ".med-via"
-                                    )
-                                    .value,
-
-                            horario:
-                                bloco
-                                    .querySelector(
-                                        ".med-horario"
-                                    )
-                                    .value,
-
-                            status:
-                                bloco
-                                    .querySelector(
-                                        ".med-status"
-                                    )
-                                    .value,
-
-                            observacao:
-                                bloco
-                                    .querySelector(
-                                        ".med-observacao"
-                                    )
-                                    .value
-                                    .trim()
-
-                        });
-
-                    }
-                );
-
-
-                return medicamentos;
-
-            }
-
-
-            // =====================================================
-            // CHECKBOXES
-            // =====================================================
-
-            function obterCheckboxes(
-                nome
-            ) {
-
-                return [
-                    ...document.querySelectorAll(
-                        `input[name="${nome}"]:checked`
-                    )
-                ].map(
-                    checkbox =>
-                        checkbox.value
-                );
-
-            }
-
-
-            // =====================================================
-            // SALVAR REGISTRO
-            // =====================================================
-
-            form.addEventListener(
-                "submit",
-                function (event) {
-
-                    event.preventDefault();
-
-
-                    if (!pacienteAtual) {
-
-                        mostrarMensagem(
-                            "Selecione um paciente antes de salvar.",
-                            "erro"
-                        );
-
-                        return;
-
-                    }
-
-
-                    const registro = {
-
-                        id:
-                            crypto.randomUUID
-                            ? crypto.randomUUID()
-                            : Date.now().toString(),
-
-
-                        dataRegistro:
-                            new Date().toISOString(),
-
-
-                        // -----------------------------
-                        // CONDIÇÃO
-                        // -----------------------------
-
-                        condicaoAtual:
-                            valor(
-                                "condicaoAtual"
-                            ),
-
-                        nivelConsciencia:
-                            valor(
-                                "nivelConsciencia"
-                            ),
-
-                        estadoGeral:
-                            valor(
-                                "estadoGeral"
-                            ),
-
-
-                        // -----------------------------
-                        // SINAIS VITAIS
-                        // -----------------------------
-
-                        sinaisVitais: {
-
-                            pressaoArterial:
-                                valor(
-                                    "pressaoArterial"
-                                ),
-
-                            frequenciaCardiaca:
-                                valor(
-                                    "frequenciaCardiaca"
-                                ),
-
-                            frequenciaRespiratoria:
-                                valor(
-                                    "frequenciaRespiratoria"
-                                ),
-
-                            temperatura:
-                                valor(
-                                    "temperatura"
-                                ),
-
-                            saturacao:
-                                valor(
-                                    "saturacao"
-                                ),
-
-                            glicemia:
-                                valor(
-                                    "glicemia"
-                                ),
-
-                            dor:
-                                valor(
-                                    "dor"
-                                )
-
-                        },
-
-
-                        // -----------------------------
-                        // CUIDADOS
-                        // -----------------------------
-
-                        cuidados:
-                            obterCheckboxes(
-                                "cuidados"
-                            ),
-
-                        detalhesCuidados:
-                            valor(
-                                "detalhesCuidados"
-                            ),
-
-
-                        // -----------------------------
-                        // MEDICAMENTOS
-                        // -----------------------------
-
-                        medicamentos:
-                            obterMedicamentos(),
-
-
-                        // -----------------------------
-                        // PROCEDIMENTOS
-                        // -----------------------------
-
-                        procedimento: {
-
-                            tipo:
-                                valor(
-                                    "tipoProcedimento"
-                                ),
-
-                            local:
-                                valor(
-                                    "localProcedimento"
-                                ),
-
-                            detalhes:
-                                valor(
-                                    "detalhesProcedimento"
-                                )
-
-                        },
-
-
-                        // -----------------------------
-                        // FERIDAS
-                        // -----------------------------
-
-                        ferida: {
-
-                            local:
-                                valor(
-                                    "localFerida"
-                                ),
-
-                            tipo:
-                                valor(
-                                    "tipoFerida"
-                                ),
-
-                            tamanho:
-                                valor(
-                                    "tamanhoFerida"
-                                ),
-
-                            aspecto:
-                                valor(
-                                    "aspectoFerida"
-                                ),
-
-                            detalhes:
-                                valor(
-                                    "detalhesCurativo"
-                                )
-
-                        },
-
-
-                        // -----------------------------
-                        // ALIMENTAÇÃO
-                        // -----------------------------
-
-                        alimentacao: {
-
-                            tipo:
-                                valor(
-                                    "tipoAlimentacao"
-                                ),
-
-                            aceitacao:
-                                valor(
-                                    "aceitacaoAlimentacao"
-                                ),
-
-                            detalhes:
-                                valor(
-                                    "detalhesAlimentacao"
-                                )
-
-                        },
-
-
-                        // -----------------------------
-                        // DISPOSITIVOS
-                        // -----------------------------
-
-                        dispositivos:
-                            obterCheckboxes(
-                                "dispositivos"
-                            ),
-
-                        detalhesDispositivos:
-                            valor(
-                                "detalhesDispositivos"
-                            ),
-
-
-                        // -----------------------------
-                        // INTERCORRÊNCIA
-                        // -----------------------------
-
-                        intercorrencia: {
-
-                            tipo:
-                                valor(
-                                    "tipoIntercorrencia"
-                                ),
-
-                            detalhes:
-                                valor(
-                                    "detalhesIntercorrencia"
-                                ),
-
-                            conduta:
-                                valor(
-                                    "condutaIntercorrencia"
-                                )
-
-                        },
-
-
-                        // -----------------------------
-                        // EVOLUÇÃO
-                        // -----------------------------
-
-                        evolucao:
-                            valor(
-                                "evolucao"
-                            ),
-
-
-                        // -----------------------------
-                        // OBSERVAÇÕES
-                        // -----------------------------
-
-                        observacoes:
-                            valor(
-                                "observacoes"
-                            )
-
-                    };
-
-
-                    // =================================================
-                    // ATUALIZAR PACIENTE
-                    // =================================================
-
-                    const pacientes =
-                        obterPacientes();
-
-
-                    const indice =
-                        pacientes.findIndex(
-                            paciente =>
-                                paciente.prontuario ===
-                                pacienteAtual.prontuario
-                        );
-
-
-                    if (
-                        indice === -1
-                    ) {
-
-                        mostrarMensagem(
-                            "Não foi possível encontrar o paciente.",
-                            "erro"
-                        );
-
-                        return;
-
-                    }
-
-
-                    if (
-                        !Array.isArray(
-                            pacientes[indice].registros
-                        )
-                    ) {
-
-                        pacientes[indice].registros =
-                            [];
-
-                    }
-
-
-                    pacientes[indice]
-                        .registros
-                        .push(
-                            registro
-                        );
-
-
-                    // Atualiza também a condição atual
-                    // para a futura tela de registros.
-
-                    if (
-                        registro.condicaoAtual
-                    ) {
-
-                        pacientes[indice]
-                            .condicaoAtual =
-                            registro.condicaoAtual;
-
-                    }
-
-
-                    pacientes[indice]
-                        .ultimaAtualizacao =
-                        registro.dataRegistro;
-
-
-                    salvarPacientes(
-                        pacientes
-                    );
-
-
-                    // Atualiza paciente atual
-
-                    pacienteAtual =
-                        pacientes[indice];
-
-
-                    // =================================================
-                    // CONFIRMAÇÃO
-                    // =================================================
-
-                    mostrarMensagem(
-                        "Registro salvo com sucesso no prontuário.",
-                        "sucesso"
-                    );
-
-
-                    // =================================================
-                    // ATUALIZAR HISTÓRICO
-                    // =================================================
-
-                    mostrarHistorico();
-
-
-                    // =================================================
-                    // LIMPAR FORMULÁRIO
-                    // =================================================
-
-                    limparFormularioRegistro();
-
-                }
-            );
-
-
-            // =====================================================
-            // LIMPAR FORMULÁRIO
-            // =====================================================
-
-            function limparFormularioRegistro() {
-
-                const campos =
-                    form.querySelectorAll(
-                        "input, textarea, select"
-                    );
-
-
-                campos.forEach(
-                    campo => {
-
-                        if (
-                            campo.type ===
-                            "checkbox"
-                        ) {
-
-                            campo.checked =
-                                false;
-
-                        } else {
-
-                            campo.value =
-                                "";
-
-                        }
-
-                    }
-                );
-
-
-                document.getElementById(
-                    "listaMedicamentos"
-                ).innerHTML =
-                    "";
-
-
-                contadorMedicamentos =
-                    0;
-
-            }
-
-
-            // =====================================================
-            // VALOR DO CAMPO
-            // =====================================================
-
-            function valor(id) {
-
-                const campo =
-                    document.getElementById(
-                        id
-                    );
-
-
-                if (!campo) {
-
-                    return "";
-
-                }
-
-
-                return campo.value.trim();
-
-            }
-
-
-            // =====================================================
-            // MENSAGEM
-            // =====================================================
-
-            function mostrarMensagem(
-                texto,
-                tipo
-            ) {
-
-                const elemento =
-                    document.getElementById(
-                        "mensagemProntuario"
-                    );
-
-
-                elemento.textContent =
-                    texto;
-
-
-                elemento.className =
-                    "mensagem-prontuario " +
-                    tipo;
-
-
-                setTimeout(
-                    () => {
-
-                        elemento.textContent =
-                            "";
-
-                        elemento.className =
-                            "mensagem-prontuario";
-
-                    },
-                    5000
-                );
-
-            }
-
-
-            // =====================================================
-            // DATA
-            // =====================================================
-
-            function formatarData(
-                data
-            ) {
-
-                if (!data) {
-
-                    return "Não informado";
-
-                }
-
-
-                const partes =
-                    data.split("-");
-
-
-                if (
-                    partes.length !== 3
-                ) {
-
-                    return data;
-
-                }
-
-
-                return `${partes[2]}/${partes[1]}/${partes[0]}`;
-
-            }
-
-
-            function formatarDataHora(
-                data
-            ) {
-
-                const dataObj =
-                    new Date(data);
-
-
-                return dataObj.toLocaleString(
-                    "pt-BR",
-                    {
-                        dateStyle:
-                            "short",
-                        timeStyle:
-                            "short"
-                    }
-                );
-
-            }
-
-
-            // =====================================================
-            // SEGURANÇA BÁSICA PARA TEXTO
-            // =====================================================
-
-            function escaparHTML(
-                texto
-            ) {
-
-                return String(texto || "")
-                    .replace(
-                        /&/g,
-                        "&amp;"
-                    )
-                    .replace(
-                        /</g,
-                        "&lt;"
-                    )
-                    .replace(
-                        />/g,
-                        "&gt;"
-                    )
-                    .replace(
-                        /"/g,
-                        "&quot;"
-                    )
-                    .replace(
-                        /'/g,
-                        "&#039;"
-                    );
-
-            }
-
-        </script>
-
     </body>
-
     </html>
