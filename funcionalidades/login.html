@@ -1,146 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Login - Sistema de Enfermagem</title>
-
-    <link
-        rel="stylesheet"
-        href="../visual/style.css"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniProz</title>
+    <link rel="stylesheet" href="../visual/style.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="icone UniProz">
+    <script src="../funcionalidades/main.js" defer></script>
 </head>
-
-
 <body>
-
     <main class="login-container">
-
         <section class="login-box">
-
             <header class="login-header">
-
                 <div class="login-icone">
                     🩺
                 </div>
-
                 <h1>
                     Acesso profissional
                 </h1>
-
                 <p>
                     Sistema de Enfermagem
                 </p>
-
                 <small>
                     Acesso exclusivo para profissionais autorizados
                 </small>
-
             </header>
 
-
-            <form
-                id="formLogin"
-                novalidate
-            >
-
-                <!-- =====================================
-                     NOME DA PROFISSIONAL
-                ====================================== -->
-
+            <form id="formLogin" novalidate>
                 <div class="form-group">
-
                     <label for="loginNome">
                         Nome da profissional
                     </label>
 
-                    <input
-                        type="text"
-                        id="loginNome"
-                        name="loginNome"
-                        placeholder="Digite seu nome completo"
-                        autocomplete="username"
-                        required
-                    >
+                    <input type="text" id="loginNome" name="loginNome" placeholder="Digite seu nome completo" autocomplete="username" required >
 
-                    <small
-                        id="loginNome-feedback"
-                        class="feedback-campo"
-                    ></small>
-
+                    <small id="loginNome-feedback" class="feedback-campo"></small>
                 </div>
 
-
-                <!-- =====================================
-                     SENHA
-                ====================================== -->
-
                 <div class="form-group">
-
                     <label for="loginSenha">
                         Senha
                     </label>
 
-                    <input
-                        type="password"
-                        id="loginSenha"
-                        name="loginSenha"
-                        placeholder="Digite sua senha"
-                        autocomplete="current-password"
-                        required
-                    >
-
-                    <small
-                        id="loginSenha-feedback"
-                        class="feedback-campo"
-                    ></small>
-
+                    <input type="password" id="loginSenha" name="loginSenha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                    <small id="loginSenha-feedback" class="feedback-campo"></small>
                 </div>
 
-
-                <!-- =====================================
-                     MENSAGEM
-                ====================================== -->
-
-                <div
-                    id="mensagemLogin"
-                    class="mensagem"
-                ></div>
-
-
-                <!-- =====================================
-                     BOTÃO
-                ====================================== -->
+                <div id="mensagemLogin" class="mensagem"></div>
 
                 <div class="form-actions">
-
-                    <button
-                        type="submit"
-                        class="btn-principal"
-                    >
+                    <button type="submit" class="btn-principal">
                         Entrar no sistema
                     </button>
-
+                    
                 </div>
-
-
             </form>
-
         </section>
-
     </main>
-
-
-    <script src="main.js"></script>
-
 </body>
-
 </html>
