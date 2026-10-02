@@ -1,123 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Tela de Acompanhamento
-    </title>
-
-    <!--
-        CSS específico desta tela.
-        Será criado na próxima etapa.
-    -->
-    <link
-        rel="stylesheet"
-        href="../visual/tela_acompanhamento.css"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniProz</title>
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="icone UniProz">
+    <link rel="stylesheet" href="../visual/tela_acompanhamento.css">
+    <script src="../funcionalidades/registro.js" defer></script>
 </head>
-
-
 <body>
-
     <main class="pagina-acompanhamento">
-
-
-        <!-- =====================================================
-             CABEÇALHO
-        ====================================================== -->
-
         <header class="cabecalho-acompanhamento">
-
             <div class="cabecalho-identidade">
-
                 <div class="icone-setembro">
-
                     <span>
                         💛
                     </span>
-
                 </div>
-
-
                 <div>
-
                     <p class="subtitulo-sistema">
                         Sistema de Enfermagem
                     </p>
-
                     <h1>
                         Registro de Acompanhamento
                     </h1>
-
                     <p class="descricao-cabecalho">
                         Histórico dos registros realizados no sistema
                     </p>
-
                 </div>
-
             </div>
-
-
             <div class="cabecalho-profissional">
-
                 <span>
                     Profissional
                 </span>
-
                 <strong>
                     Médica
                 </strong>
-
             </div>
-
         </header>
 
-
-
-        <!-- =====================================================
-             PAINEL DE RESUMO
-        ====================================================== -->
-
         <section class="resumo-acompanhamento">
-
             <div class="card-resumo">
-
                 <div class="icone-resumo">
                     👥
                 </div>
-
                 <div>
-
                     <span>
                         Pacientes
                     </span>
-
                     <strong id="totalPacientes">
                         0
                     </strong>
-
                 </div>
-
             </div>
-
-
             <div class="card-resumo">
-
                 <div class="icone-resumo">
                     📋
                 </div>
-
                 <div>
-
                     <span>
                         Registros
                     </span>
@@ -125,123 +65,72 @@
                     <strong id="totalRegistros">
                         0
                     </strong>
-
                 </div>
-
             </div>
-
-
             <div class="card-resumo">
-
                 <div class="icone-resumo">
                     💊
                 </div>
-
                 <div>
-
                     <span>
                         Medicamentos
                     </span>
-
                     <strong id="totalMedicamentos">
                         0
                     </strong>
-
                 </div>
-
             </div>
-
-
             <div class="card-resumo">
-
                 <div class="icone-resumo">
                     🩺
                 </div>
-
                 <div>
-
                     <span>
                         Último registro
                     </span>
-
                     <strong id="ultimoRegistro">
                         --
                     </strong>
-
                 </div>
-
             </div>
-
         </section>
 
-
-
-        <!-- =====================================================
-             ÁREA DE PESQUISA
-        ====================================================== -->
-
         <section class="painel-filtros">
-
             <div class="titulo-filtros">
-
                 <div>
-
                     <span class="rotulo-secao">
                         ACOMPANHAMENTO
                     </span>
-
                     <h2>
                         Registros realizados
                     </h2>
-
                     <p>
                         Consulte todos os registros realizados
                         no prontuário dos pacientes.
                     </p>
-
                 </div>
-
             </div>
 
-
             <div class="filtros">
-
-                <!-- BUSCA -->
-
                 <div class="campo-filtro campo-busca">
-
                     <label for="buscaRegistro">
                         Pesquisar
                     </label>
-
                     <div class="input-busca">
-
                         <span>
                             🔎
                         </span>
 
-                        <input
-                            type="text"
-                            id="buscaRegistro"
-                            placeholder="Nome ou número do prontuário..."
-                            autocomplete="off"
-                        >
-
+                        <input type="text" id="buscaRegistro" placeholder="Nome ou número do prontuário..." autocomplete="off">
                     </div>
-
                 </div>
 
-
-                <!-- FILTRO -->
-
                 <div class="campo-filtro">
-
                     <label for="filtroRegistro">
                         Tipo de registro
                     </label>
 
                     <select id="filtroRegistro">
-
                         <option value="todos">
                             Todos os registros
                         </option>
@@ -289,22 +178,13 @@
                         <option value="observacoes">
                             Observações
                         </option>
-
                     </select>
-
                 </div>
-
-
-                <!-- ORDENAÇÃO -->
-
                 <div class="campo-filtro">
-
                     <label for="ordenacaoRegistro">
                         Ordenar por
                     </label>
-
                     <select id="ordenacaoRegistro">
-
                         <option value="mais-recente">
                             Mais recentes
                         </option>
@@ -316,273 +196,138 @@
                         <option value="nome">
                             Nome do paciente
                         </option>
-
                     </select>
-
                 </div>
-
-
-                <!-- BOTÃO -->
-
-                <button
-                    type="button"
-                    id="btnLimparFiltros"
-                    class="btn-limpar"
-                >
+                <button type="button" id="btnLimparFiltros" class="btn-limpar">
                     Limpar filtros
                 </button>
-
             </div>
-
         </section>
 
-
-
-        <!-- =====================================================
-             INDICADOR DOS RESULTADOS
-        ====================================================== -->
-
         <section class="barra-resultados">
-
             <div>
-
                 <strong id="quantidadeResultados">
                     0 registros encontrados
                 </strong>
-
                 <span>
                     Histórico de acompanhamento
                 </span>
-
             </div>
-
-
-            <div
-                id="statusFiltros"
-                class="status-filtros"
-            >
+            <div id="statusFiltros" class="status-filtros">
                 Todos os registros
             </div>
-
         </section>
 
+        <section id="listaRegistros" class="lista-registros">
 
-
-        <!-- =====================================================
-             LISTA DE REGISTROS
-        ====================================================== -->
-
-        <section
-            id="listaRegistros"
-            class="lista-registros"
-        >
-
-            <!--
-
-                Os registros serão inseridos
-                pelo arquivo registro.js.
-
-            -->
-
-
-            <!-- =================================================
-                 ESTADO VAZIO
-            ================================================== -->
-
-            <div
-                id="estadoVazio"
-                class="estado-vazio"
-            >
-
+            <div id="estadoVazio" class="estado-vazio" >
                 <div class="icone-vazio">
                     📋
                 </div>
-
                 <h2>
                     Nenhum registro encontrado
                 </h2>
-
                 <p>
                     Os registros realizados no prontuário
                     aparecerão nesta tela.
                 </p>
-
             </div>
-
         </section>
 
-
-
-        <!-- =====================================================
-             MODELO VISUAL DE UM REGISTRO
-
-             O JavaScript utilizará esta estrutura como
-             referência para montar os registros.
-
-             Este bloco permanece oculto.
-        ====================================================== -->
-
         <template id="modeloRegistro">
-
             <article class="registro-acompanhamento">
-
-
-                <!-- =============================================
-                     CABEÇALHO DO REGISTRO
-                ============================================== -->
-
                 <header class="registro-cabecalho">
-
                     <div class="registro-identificacao">
-
                         <div class="avatar-paciente">
 
                             <span>
                                 👤
                             </span>
-
                         </div>
 
-
                         <div>
-
                             <span class="registro-paciente-label">
                                 PACIENTE
                             </span>
-
                             <h2
                                 class="registro-paciente-nome"
                             >
                                 Nome do paciente
                             </h2>
-
                             <p class="registro-prontuario">
                                 Prontuário:
                                 <strong>
                                     000000
                                 </strong>
                             </p>
-
                         </div>
-
                     </div>
 
-
                     <div class="registro-data">
-
                         <span>
                             Data do registro
                         </span>
-
                         <strong class="registro-data-valor">
                             00/00/0000 00:00
                         </strong>
-
                     </div>
-
                 </header>
 
-
-
-                <!-- =============================================
-                     PROFISSIONAL
-                ============================================== -->
-
                 <div class="registro-profissional">
-
                     <span>
                         Registrado por
                     </span>
-
                     <strong class="registro-profissional-valor">
                         Médica
                     </strong>
-
                 </div>
 
-
-
-                <!-- =============================================
-                     CONDIÇÃO
-                ============================================== -->
-
                 <section class="registro-bloco registro-condicao">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             🩺
                         </span>
-
                         <h3>
                             Condição atual
                         </h3>
-
                     </div>
 
-
                     <div class="registro-dados-condicao">
-
                         <div>
-
                             <span>
                                 Nível de consciência
                             </span>
-
                             <strong class="registro-consciencia">
                                 Não informado
                             </strong>
-
                         </div>
 
-
                         <div>
-
                             <span>
                                 Estado geral
                             </span>
-
                             <strong class="registro-estado-geral">
                                 Não informado
                             </strong>
-
                         </div>
-
                     </div>
-
-
                     <p
                         class="registro-condicao-texto"
                     >
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     SINAIS VITAIS
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             ❤️
                         </span>
-
                         <h3>
                             Sinais vitais
                         </h3>
-
                     </div>
-
-
                     <div class="grade-sinais">
-
                         <div class="sinal-vital">
-
                             <span>
                                 Pressão arterial
                             </span>
@@ -590,12 +335,8 @@
                             <strong class="sinal-pressao">
                                 --
                             </strong>
-
                         </div>
-
-
                         <div class="sinal-vital">
-
                             <span>
                                 Frequência cardíaca
                             </span>
@@ -603,12 +344,8 @@
                             <strong class="sinal-cardiaca">
                                 --
                             </strong>
-
                         </div>
-
-
                         <div class="sinal-vital">
-
                             <span>
                                 Frequência respiratória
                             </span>
@@ -616,12 +353,9 @@
                             <strong class="sinal-respiratoria">
                                 --
                             </strong>
-
                         </div>
 
-
                         <div class="sinal-vital">
-
                             <span>
                                 Temperatura
                             </span>
@@ -629,25 +363,16 @@
                             <strong class="sinal-temperatura">
                                 --
                             </strong>
-
                         </div>
-
-
                         <div class="sinal-vital">
-
                             <span>
                                 Saturação O₂
                             </span>
-
                             <strong class="sinal-saturacao">
                                 --
                             </strong>
-
                         </div>
-
-
                         <div class="sinal-vital">
-
                             <span>
                                 Glicemia
                             </span>
@@ -655,12 +380,8 @@
                             <strong class="sinal-glicemia">
                                 --
                             </strong>
-
                         </div>
-
-
                         <div class="sinal-vital sinal-dor">
-
                             <span>
                                 Escala de dor
                             </span>
@@ -668,545 +389,288 @@
                             <strong class="sinal-dor-valor">
                                 --
                             </strong>
-
                         </div>
-
                     </div>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     CUIDADOS
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             🧼
                         </span>
-
                         <h3>
                             Cuidados realizados
                         </h3>
-
                     </div>
-
-
-                    <div
-                        class="tags-cuidados"
-                    >
-                    </div>
-
+                    <div class="tags-cuidados"> </div>
 
                     <div class="registro-texto-secundario">
-
                         <span>
                             Detalhes
                         </span>
-
                         <p class="registro-detalhes-cuidados">
                             Não informado
                         </p>
-
                     </div>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     MEDICAMENTOS
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             💊
                         </span>
-
                         <h3>
                             Medicamentos
                         </h3>
-
                     </div>
 
-
-                    <div
-                        class="lista-medicamentos-registro"
-                    >
+                    <div class="lista-medicamentos-registro">
                     </div>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     PROCEDIMENTO
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             🩹
                         </span>
-
                         <h3>
                             Procedimento realizado
                         </h3>
-
                     </div>
 
-
                     <div class="dados-procedimento">
-
                         <div>
-
                             <span>
                                 Tipo
                             </span>
-
                             <strong class="procedimento-tipo">
                                 Não informado
                             </strong>
-
                         </div>
 
-
                         <div>
-
                             <span>
                                 Local
                             </span>
-
                             <strong class="procedimento-local">
                                 Não informado
                             </strong>
-
                         </div>
-
                     </div>
-
-
                     <p class="procedimento-detalhes">
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     FERIDA / CURATIVO
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             🩹
                         </span>
-
                         <h3>
                             Curativos e feridas
                         </h3>
-
                     </div>
 
-
                     <div class="dados-ferida">
-
                         <div>
-
                             <span>
                                 Local
                             </span>
-
                             <strong class="ferida-local">
                                 Não informado
                             </strong>
-
                         </div>
-
-
                         <div>
-
                             <span>
                                 Tipo
                             </span>
-
                             <strong class="ferida-tipo">
                                 Não informado
                             </strong>
-
                         </div>
 
-
                         <div>
-
                             <span>
                                 Dimensões
                             </span>
-
                             <strong class="ferida-tamanho">
                                 Não informado
                             </strong>
-
                         </div>
 
-
                         <div>
-
                             <span>
                                 Aspecto
                             </span>
-
                             <strong class="ferida-aspecto">
                                 Não informado
                             </strong>
-
                         </div>
-
                     </div>
-
 
                     <p class="ferida-detalhes">
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     ALIMENTAÇÃO
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             🍎
                         </span>
-
                         <h3>
                             Alimentação e hidratação
                         </h3>
-
                     </div>
-
-
                     <div class="dados-alimentacao">
-
                         <div>
-
                             <span>
                                 Tipo
                             </span>
-
                             <strong class="alimentacao-tipo">
                                 Não informado
                             </strong>
-
                         </div>
-
-
                         <div>
-
                             <span>
                                 Aceitação
                             </span>
-
                             <strong class="alimentacao-aceitacao">
                                 Não informado
                             </strong>
-
                         </div>
-
                     </div>
-
-
                     <p class="alimentacao-detalhes">
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     DISPOSITIVOS
-                ============================================== -->
-
                 <section class="registro-bloco">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             🔗
                         </span>
-
                         <h3>
                             Dispositivos
                         </h3>
-
                     </div>
-
-
                     <div
                         class="tags-dispositivos"
                     >
                     </div>
-
-
                     <p class="dispositivos-detalhes">
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     INTERCORRÊNCIA
-                ============================================== -->
-
-                <section
-                    class="registro-bloco bloco-intercorrencia"
-                >
-
+                <section class="registro-bloco bloco-intercorrencia">
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             ⚠️
                         </span>
-
                         <h3>
                             Intercorrência
                         </h3>
-
                     </div>
 
-
                     <div class="intercorrencia-tipo">
-
                         <span>
                             Tipo
                         </span>
-
                         <strong>
                             Nenhuma
                         </strong>
-
                     </div>
 
-
                     <div class="intercorrencia-conteudo">
-
                         <div>
-
                             <span>
                                 Descrição
                             </span>
-
                             <p class="intercorrencia-detalhes">
                                 Não informado
                             </p>
-
                         </div>
 
-
                         <div>
-
                             <span>
                                 Conduta registrada
                             </span>
-
                             <p class="intercorrencia-conduta">
                                 Não informado
                             </p>
-
                         </div>
-
                     </div>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     EVOLUÇÃO
-                ============================================== -->
-
                 <section class="registro-bloco bloco-evolucao">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             📈
                         </span>
-
                         <h3>
                             Evolução do paciente
                         </h3>
-
                     </div>
-
 
                     <p class="registro-evolucao">
                         Não informado
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     OBSERVAÇÕES
-                ============================================== -->
-
                 <section class="registro-bloco bloco-observacoes">
-
                     <div class="registro-bloco-titulo">
-
                         <span class="icone-bloco">
                             📝
                         </span>
-
                         <h3>
                             Observações gerais
                         </h3>
-
                     </div>
-
-
                     <p class="registro-observacoes">
                         Não informado
                     </p>
-
                 </section>
 
-
-
-                <!-- =============================================
-                     RODAPÉ
-                ============================================== -->
-
                 <footer class="registro-rodape">
-
                     <span>
                         Registro de acompanhamento
                     </span>
-
                     <strong class="registro-id">
                         ID: --
                     </strong>
-
                 </footer>
-
-
             </article>
-
         </template>
 
+        <nav class="paginacao" id="paginacao" aria-label="Paginação">
 
-
-        <!-- =====================================================
-             PAGINAÇÃO
-        ====================================================== -->
-
-        <nav
-            class="paginacao"
-            id="paginacao"
-            aria-label="Paginação"
-        >
-
-            <button
-                type="button"
-                id="paginaAnterior"
-                class="btn-paginacao"
-                disabled
-            >
+            <button type="button" id="paginaAnterior" class="btn-paginacao" disabled>
                 ←
             </button>
-
-
-            <div
-                id="numerosPaginas"
-                class="numeros-paginas"
-            >
+            <div id="numerosPaginas" class="numeros-paginas">
             </div>
-
-
-            <button
-                type="button"
-                id="paginaProxima"
-                class="btn-paginacao"
-            >
+            <button type="button" id="paginaProxima" class="btn-paginacao">
                 →
             </button>
-
         </nav>
 
-
-
-        <!-- =====================================================
-             RODAPÉ DO SISTEMA
-        ====================================================== -->
-
         <footer class="rodape-acompanhamento">
-
             <div>
-
                 <strong>
                     Sistema de Enfermagem
                 </strong>
-
                 <span>
                     Registro e acompanhamento de pacientes
                 </span>
-
             </div>
 
-
             <div class="rodape-setembro">
-
                 <span>
                     💛
                 </span>
-
                 <span>
                     Cuidado, atenção e acolhimento
                 </span>
-
             </div>
-
         </footer>
-
-
     </main>
-
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <!--
-        O arquivo registro.js será criado
-        na próxima etapa.
-    -->
-
-    <script
-        src="registro.js"
-    ></script>
-
-
 </body>
-
 </html>
