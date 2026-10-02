@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniProz</title>
+    <link rel="stylesheet" href="../visual/style.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="icone UniProz">
+    <script src="../funcionalidades/main.js" defer></script>
+</head>
+<body>
+    <main class="login-container">
+        <section class="login-box">
+            <header class="login-header">
+                <div class="login-icone">
+                    🩺
+                </div>
+                <h1>
+                    Cadastro profissional
+                </h1>
+                <p>
+                    Sistema de Enfermagem
+                </p>
+                <small>
+                    Cadastre uma profissional autorizada
+                </small>
+            </header>
+
+            <form id="formCadastroProfissional" novalidate>
+
+                <div class="form-group">
+                    <label for="nomeProfissional">
+                        Nome da profissional
+                    </label>
+
+                    <input type="text" id="nomeProfissional" name="nomeProfissional" placeholder="Digite seu nome completo" autocomplete="name" required>
+
+                    <small id="nomeProfissional-feedback" class="feedback-campo"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="senhaProfissional">
+                        Senha
+                    </label>
+
+                    <input type="password" id="senhaProfissional" name="senhaProfissional" placeholder="Digite sua senha" autocomplete="new-password" required>
+
+                    <small id="senhaProfissional-feedback" class="feedback-campo"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmarSenha">
+                        Confirmar senha
+                    </label>
+
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Digite a senha novamente" autocomplete="new-password" required>
+
+                    <small id="confirmarSenha-feedback" class="feedback-campo"></small>
+                </div>
+
+                <div id="mensagemProfissional" class="mensagem"></div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-principal">
+                        Cadastrar profissional
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
